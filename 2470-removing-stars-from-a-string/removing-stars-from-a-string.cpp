@@ -13,18 +13,26 @@ public:
             }
             else st.push(s[i]);
         }
-        stack<char> f;
+        // stack<char> f;
+        // while(!st.empty())
+        // {
+        //     f.push(st.top());
+        //     st.pop();
+        // }
+        // string a;
+        // while(!f.empty())
+        // {   
+        //     a+=f.top();
+        //     f.pop();
+        // }
+        string a;
         while(!st.empty())
-        {
-            f.push(st.top());
+        {   
+            a+=st.top();
             st.pop();
         }
-        string a;
-        while(!f.empty())
-        {   
-            a+=f.top();
-            f.pop();
-        }
+        reverse(a.begin(),a.end());
+        
         return a;
     }
 };
