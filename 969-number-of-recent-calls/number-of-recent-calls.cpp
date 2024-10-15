@@ -1,21 +1,21 @@
 class RecentCounter {
 public:
     vector<int> v;
+    int start;
     RecentCounter() {
-        
+        start=0;
     }
     
     int ping(int t) {
         v.push_back(t);
-        int ans=0;
         for(int i=0;i<v.size();i++)
         {
-            if((v[i]>=t-3000)&&(v[i]<=t))
+            if(v[start]<t-3000)
             {
-                ans+=1;
+                start++;
             }
         }
-        return ans;
+        return v.size()-start;
     }
 };
 
