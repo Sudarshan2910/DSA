@@ -3,7 +3,7 @@ public:
     bool isSubsequence(string s, string t) {
     int n=s.length();
 	int m=t.length();
-	int i=0,j=0,k=0;
+	int i=0,j=0;
 	bool ans=false;
 	while(j<m && i<n) {
 		if(s[i]==t[j])
